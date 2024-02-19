@@ -1,0 +1,1921 @@
+/*
+* Descripcion: hoja de estilos para las metacursos rediseno de UTPL MAD.
+* Ultima actualizacion: 03/12/2020
+* Autor: Ediloja Digital
+*
+* Contenido:
+*
+*    0. Estilos generales
+*    1. Multiples planes docentes
+*    2. Modal
+*    3. Grid
+*    4. Menu principal
+*    5. Resultados de aprendizaje
+*    6. Tabla general
+*    7. Tabla de componentes
+*    8. Otros estilos
+*    9. Previsualziacion
+*    10. Boton flotante
+*    11.Media Query 
+*    12.Dark Mode 
+*/
+
+/* ==========================================================================
+  0. Estilos generales
+  ========================================================================== */
+
+  .fce .contenedor-principal {
+    padding: 0;
+    margin: 15px 0;
+}
+
+.fce .contenedor-flex {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.fce .contenedor-filas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.fce .contorno {
+    background-color: #003f72;
+    height: auto;
+    padding: 10px;
+}
+
+.fce .figura-benner {
+    width: 50%;
+    padding: 1%;
+}
+
+.fce .separador {
+    border-top: #CCCCCC solid 2px !important;
+    margin: 10px 0px;
+}
+
+
+.fce .contenedor-recurso .estilo-enlace a {
+    display: grid;
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 0 0.9em #a6a7a8;
+    margin-right: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: relative;
+    border-radius: 0.6em;
+    transition: background-color 0.8s ease;
+    text-decoration: none !important;
+    color: #153B6D;
+    align-items: flex-end;
+}
+
+.fce .contenedor-recurso .estilo-enlace {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+.fce .active .mostrar-modal {
+    background: #004170 !important;
+    color: #ffffff !important;
+}
+
+
+.fce .active .imagen-frontal {
+    opacity: 0;
+}
+
+
+.fce .contenedor-recurso .estilo-enlace a:hover {
+    background-color: #004170;
+    color: #ffffff;
+}
+
+
+
+.fce .contenedor-recurso .imagen {
+    position: absolute;
+    top: -2em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.fce .contenedor-recurso .estilo-enlace a span {
+
+    margin: auto;
+    line-height: 80%;
+}
+
+.fce .contenedor-recurso .estilo-enlace .imagen-frontal {
+    z-index: 10;
+}
+
+.fce .contenedor-recurso a:hover .imagen-frontal {
+    opacity: 0;
+}
+
+.fce .contenedor-subtitulo {
+    width: 100%;
+    color: #003F72;
+    text-align: left;
+    margin: 0px;
+    background-color: #F2F2F2;
+    padding-left: 1em;
+    border-left: 5px solid #E1AA3B;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.fce .contenido-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fce .contenido-principal {
+    margin-left: 6em;
+}
+
+
+.fce .fondo-semana1 {
+    background-image: url(http://drive.google.com/uc?id=1kal0-9K1sao3BnT6G0XMpjn4GGJLhOGz);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    height: 180px;
+    background-attachment: inherit;
+}
+
+.fce .fondo-semana9 {
+    background-image: url(http://drive.google.com/uc?id=1kal0-9K1sao3BnT6G0XMpjn4GGJLhOGz);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    height: 180px;
+    background-attachment: inherit;
+}
+
+.fce #fotoPerfil {
+    min-width: 5em;
+    min-height: 5em;
+    border-radius: 2em;
+}
+
+.fce pre {
+    word-break: normal;
+}
+
+/* ==========================================================================
+  1. Multiples planes docentes
+  ========================================================================== */
+
+.fce .acorh {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 8em;
+    margin-right: 1.7em;
+}
+
+.fce .acorh:hover .lista-planes {
+    display: block;
+
+}
+
+.fce .acorh:hover .estilo-enlace a {
+    background-color: #004170;
+    color: #ffffff;
+}
+
+.fce .acorh:hover .estilo-enlace a .imagen-frontal {
+    opacity: 0;
+}
+
+.fce .lista-planes {
+
+    margin-top: -10px;
+    padding: 0;
+    width: 8em;
+    text-align: center;
+    display: none;
+}
+
+.fce .lista-planes p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+.fce .lista-planes a {
+    display: block;
+    text-decoration: none !important;
+    padding: 8px 8px 8px 8px;
+    color: #000;
+    border: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.8s ease;
+}
+
+.fce .lista-planes a:hover {
+    background-color: #004170;
+    color: #ffffff !important;
+}
+
+/*.fce ul.acorh,
+.fce ul.acorh * {
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+
+.fce ul.acorh {
+   margin: 10px 0 0 0;
+   padding: 0;
+   list-style: none;
+   width: 100%;
+}
+
+.fce ul.acorh li {
+   list-style: none;
+}
+
+.fce ul.acorh li a {
+   display: block;
+   padding: 8px 8px 8px 8px;
+   box-sizing: border-box;
+}
+
+.fce ul.acorh li ul {
+   max-height: 0;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   overflow: hidden;
+   transition: .3s all ease-in;
+}
+
+.fce ul.acorh li li a {
+   padding: 8px 8px 8px 8px;
+  background-color: #004170;
+   color: #ffffff;
+   border: 0;
+   border-bottom: 1px solid #ccc;
+   box-sizing: border-box;
+}
+
+.fce ul.acorc li li:last-child a {
+   border-bottom: 0;
+}
+
+.fce ul.acorc li li:last-child a {
+   margin:0;
+}
+
+.fce ul.acorh li:hover ul {
+   max-height: 300px;
+   overflow: auto;
+   transition: .3s all ease-in;
+}
+
+.fce ul.acorh li a:hover,
+.fce ul.acorh li p:hover a {
+    background-color: #004170;
+   color: #ffffff;
+}
+*/
+
+/* ==========================================================================
+  2. Modal
+  ========================================================================== */
+
+.fce .ventana-emergente {
+    display: none;
+    position: fixed !important;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.fce .ventana-emergente-requisitos {
+    display: none;
+    position: fixed !important;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.fce .contenido-ventana {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 2px solid #888;
+    width: 20%;
+    margin: auto;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(51, 51, 51, 1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(51, 51, 51, 1);
+    box-shadow: 3px 3px 5px 0px rgba(51, 51, 51, 1);
+    position: relative;
+}
+
+.fce .boton-cerrar {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    float: right;
+    font-size: 28px;
+    color: #ffffff;
+    background-color: #C1272D;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    position: absolute;
+    right: -11px;
+    top: -18px;
+    text-align: center;
+}
+
+.fce .boton-cerrar-requisitos {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    float: right;
+    font-size: 28px;
+    color: #ffffff;
+    background-color: #C1272D;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    position: absolute;
+    right: -11px;
+    top: -18px;
+    text-align: center;
+}
+
+
+/* ==========================================================================
+  3. Grid
+  ========================================================================== */
+
+.fce .columna-15 {
+    width: 13%;
+    margin: 1%;
+}
+
+.fce .columna-20 {
+    display: grid;
+}
+
+.fce .columna-25 {
+    width: 23%;
+    margin: 1%;
+}
+
+.fce .columna-30 {
+    width: 28%;
+    margin: 1%;
+}
+
+.fce .columna-50 {
+    width: 47%;
+    margin: 1%;
+}
+
+.fce .columna-70 {
+    width: 68%;
+    margin: 1%;
+}
+
+.fce .columna-75 {
+    width: 73%;
+    margin: 1%;
+}
+
+.fce .columna-80 {
+    width: 78%;
+    margin: 1%;
+}
+
+.fce .columna-85 {
+    width: 83%;
+    margin: 1%;
+}
+
+.fce .columna-100 {
+
+    width: 98%;
+    margin-bottom: 3em;
+
+}
+
+/* ==========================================================================
+  4. Menu principal
+  ========================================================================== */
+
+.fce .menu-principal {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.fce .menu-principal a {
+    width: 12.5em;
+    padding: 0.7em 1em;
+    margin: 1px 1px 0 0;
+    color: #001A67;
+    background-color: #E5F2F8;
+    text-align: center;
+    line-height: 100%;
+    text-decoration: none !important;
+    transition: all 0.8s ease;
+    display: grid;
+    align-items: center;
+    border-radius: 0.4em;
+    font-weight: bold;
+}
+
+.fce .menu-principal a:hover {
+    transform: scaleY(1.1);
+    background-color: #EAAB00;
+
+}
+
+.fce .menu-principal .active {
+    transform: scaleY(1.1);
+    background-color: #EAAB00;
+}
+
+.fce .menu-principal .icon {
+    display: none;
+    text-align: center;
+}
+
+/* Boton */
+
+.fce .boton-mas {
+    display: inline-block;
+    color: #092157;
+    background-color: #f2f2f2;
+    text-decoration: none !important;
+    padding-left: 1em;
+    border-radius: 2em;
+    border-bottom: 2px solid #cccccc;
+    transition: all .2s ease-in-out;
+}
+
+.fce .boton-mas:hover {
+    background-color: #cccccc;
+    transform: scale(1.15);
+}
+
+/* Icono de actividades (RA) */
+
+.fce .mostrar-actividades {
+    display: none;
+    position: fixed !important;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.fce .contenido-tabla {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 2px solid #888;
+    margin: auto;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(51, 51, 51, 1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(51, 51, 51, 1);
+    box-shadow: 3px 3px 5px 0px rgba(51, 51, 51, 1);
+    color: #333333;
+    position: relative;
+    width: 80%;
+}
+
+.fce .contenido-actividad {
+    position: relative;
+    transition: background 0.8s ease;
+}
+
+
+.fce .contenido-actividad a {
+
+    color: black;
+}
+
+.fce .actividad {
+    z-index: 1;
+    color: black;
+    margin: 0;
+    width: 19em;
+    border: 1px solid #004170;
+    background: #f0f8ff;
+    padding: 0.5em;
+    position: absolute;
+    transform: translate(0px, -17px);
+
+}
+
+.fce .actividad:hover {
+    color: #fff;
+    /* color de fuente hover */
+}
+
+.fce .actividad::after {
+    content: "";
+    background: #004170;
+    /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    visibility: hidden;
+}
+
+.fce .actividad:hover::after {
+    left: 0;
+    right: -1px;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    visibility: visible;
+}
+
+.fce .boton-mostrar {
+    cursor: pointer;
+
+}
+
+
+.fce .activar {
+    background: #004170 !important;
+    color: #ffffff !important;
+    border-radius: 5px;
+}
+
+
+/*.fce .activar-cuadro {
+    border-left: 1.5px solid  #004170;
+ border-right: 1.5px solid #004170;
+ box-shadow: 0 0 0.9em #a6a7a8;
+ -webkit-transition: all 0.8s;
+ transition: all 0.8s;
+}
+
+.fce .activar-cuadro a{
+     color: #0374B5 !important;
+   text-decoration: underline !important;
+}
+*/
+
+.fce .cuadro {
+    margin: 0;
+    padding: 0;
+    border: 1.5px solid #5D6D7E;
+    border-radius: 5px;
+    position: relative;
+    -webkit-transition: all 2.5s;
+    transition: all 2.5s;
+
+}
+
+.fce .cuadro a {
+    transition: color 0.8s;
+    display: grid;
+    text-decoration: none !important;
+    position: relative;
+    border-radius: 10px;
+    align-content: center;
+    padding: 1.5em;
+   line-height: 1em;
+
+}
+
+.fce .cuadro p {
+    padding: 0;
+    margin: 0;
+}
+
+.fce .cuadro:hover {
+    color: #fff;
+    /* color de fuente hover */
+}
+
+.fce .cuadro::after {
+    content: "";
+    background: #004170;
+    /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    visibility: hidden;
+}
+
+.fce .cuadro:hover::after {
+    left: -1px;
+    right: -1px;
+    top: -1px;
+    bottom: -1px;
+    border-radius: 5px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    visibility: visible;
+}
+
+.fce .cuadro:hover a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transition: color 0.8s;
+}
+
+/*
+.fce .cuadro:hover{
+ border-left: 1.5px solid  #004170;
+ border-right: 1.5px solid #004170;
+ box-shadow: 0 0 0.9em #a6a7a8;
+ -webkit-transition: all 0.8s;
+ transition: all 0.8s;
+
+}*/
+
+/*.fce .cuadro:after {
+ content: "";
+ color:#ffffff;
+ background: #004170; /* color de fondo hover
+ position: absolute;
+ z-index: -1;
+
+ display: block;
+ left: 0;
+ right: 0;
+ 
+ bottom: 100%;
+ -webkit-transition: all 0.35s;
+ transition: all 0.35s;
+ visibility: hidden;
+}
+.fce .cuadro:hover::after {
+ left: 0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ -webkit-transition: all 0.35s;
+ transition: all 0.8s;
+ visibility: visible;
+}
+
+.fce .cuadro:hover a{
+    color: #ffffff;
+}
+
+.fce .cuadro:hover{
+    color: #ffffff;
+}*/
+
+.fce .boton-ocultar {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    float: right;
+    font-size: 28px;
+    color: #ffffff;
+    background-color: #C1272D;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    position: absolute;
+    right: -11px;
+    top: -18px;
+    text-align: center;
+}
+
+.fce .contenido-actividad .resultado-contenido {
+    color: #333333;
+    text-align: left;
+}
+
+.fce .imagen-mostrar-ocultar {
+    margin-left: 10px;
+}
+
+.fce .boton-secundario a {
+    text-decoration: none !important;
+    color: #ffffff;
+    background: #003f72;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 6px 10px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+
+}
+
+.fce .boton-secundario a:hover {
+    background-color: #eaab00;
+    color: #153B6D;
+    font-weight: bold;
+}
+
+.fce .boton-ac a {
+    text-decoration: none !important;
+    color: #001A67;
+    background: #E5F2F8;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 6px 10px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+
+}
+
+.fce .boton-ac a:hover {
+    background-color: #EAAB00;
+    color: #153B6D;
+    font-weight: bold;
+}
+
+.fce .boton-desafios {
+    position: relative;
+    -webkit-transition: all 2.5s;
+    transition: all 2.5s;
+    cursor: pointer;
+
+    margin: auto;
+    padding: 0;
+    width: fit-content;
+
+
+}
+
+
+.fce .boton-desafios a {
+    position: relative;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none !important;
+
+}
+
+.fce .boton-desafios a:focus {
+    outline-style: none !important;
+}
+
+.fce .boton-desafios a:hover::before,
+.fce .boton-desafios a:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 6.2em;
+    height: 6.2em;
+    background: #001A67;
+    border-radius: 50%;
+    z-index: -1;
+    animation: 2s clockwise infinite;
+}
+
+.fce .boton-desafios a:hover:after {
+    background: #eaab00;
+    animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+    0% {
+        top: -3px;
+        left: 0;
+    }
+
+    12% {
+        top: -2px;
+        left: 2px;
+    }
+
+    25% {
+        top: 0;
+        left: 3px;
+    }
+
+    37% {
+        top: 2px;
+        left: 2px;
+    }
+
+    50% {
+        top: 3px;
+        left: 0;
+    }
+
+    62% {
+        top: 2px;
+        left: -2px;
+    }
+
+    75% {
+        top: 0;
+        left: -3px;
+    }
+
+    87% {
+        top: -2px;
+        left: -2px;
+    }
+
+    100% {
+        top: -3px;
+        left: 0;
+    }
+}
+
+@keyframes counterclockwise {
+    0% {
+        top: -3px;
+        right: 0;
+    }
+
+    12% {
+        top: -2px;
+        right: 2px;
+    }
+
+    25% {
+        top: 0;
+        right: 3px;
+    }
+
+    37% {
+        top: 2px;
+        right: 2px;
+    }
+
+    50% {
+        top: 3px;
+        right: 0;
+    }
+
+    62% {
+        top: 2px;
+        right: -2px;
+    }
+
+    75% {
+        top: 0;
+        right: -3px;
+    }
+
+    87% {
+        top: -2px;
+        right: -2px;
+    }
+
+    100% {
+        top: -3px;
+        right: 0;
+    }
+}
+
+
+
+.fce .active2 a {
+    background-color: #eaab00 !important;
+    color: #153B6D !important;
+    font-weight: bold;
+}
+
+
+
+
+/* ==========================================================================
+  5. Resultados de aprendizaje
+  ========================================================================== */
+
+.fce .icono-contexto {
+    height: 60px;
+    width: 60px;
+    color: #003F72;
+    padding: 0.4em;
+
+}
+
+
+.fce .amarrillo-utpl {
+    background-color: #eaab00;
+    padding: 10px;
+    margin: 0px;
+    color: #001A67;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.fce .amarrillo-utpl a {
+    color: #004170;
+    text-decoration: none !important;
+}
+
+.fce .semana {
+    border-right: 3px solid #003f72;
+    margin: 10px;
+    padding: 5px;
+    width: 100px;
+    color: #003f72;
+    text-decoration: none !important;
+}
+
+
+.fce .tab-semana p a {
+    margin: 1px 1px 0 0;
+    color: #001A67;
+    text-align: center;
+    text-decoration: none !important;
+    font-weight: bold;
+    transition: all 0.8s ease;
+    float: left;
+    margin-top: 10px;
+    margin-right: 2px;
+    background-color: #E5F2F8;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+}
+
+
+/*.fce .semana a:hover {
+   background-color: #003f72;
+   color: #004170;
+}*/
+
+
+.fce .tab-semana a:hover {
+    background-color: #eaab00;
+    /*    color: #004170 !important;
+*/
+    transform: scale(1.1);
+}
+
+
+
+
+.fce .activo-semana p a {
+    background-color: #eaab00;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+
+.fce .tab-semana p {
+    margin: 0px;
+    text-align: center;
+}
+
+
+.fce .titulo-actividad {
+    padding: 10px;
+    color: #003F72;
+    border-left: 5px solid #E1AA3B;
+    background-color: #F2F2F2;
+    width: 100%;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.fce .actividad-recomendada {
+    background: #FDFAF3;
+    margin: 0;
+    padding: 15px;
+}
+
+.fce .menu-semana {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.fce .contenedor-semana {
+    border: 1px solid #E0DED8;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+
+
+.fce .subtitulo-semana {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.fce .contenido {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.fce .actividades {
+    display: grid;
+    grid-template-columns: 100px auto;
+    align-items: center;
+}
+
+.fce .contenido .contenido-subtitulo {
+    display: grid;
+    color: #003F72;
+    text-align: left;
+    border-left: 5px solid #E1AA3B;
+    border-radius: 0 0.5em 0.5em 0;
+    /* position: absolute; */
+    width: 99%;
+    background-color: #F2F2F2;
+    /* height: 50px; */
+    padding-left: 1em;
+    align-content: center;
+}
+
+.fce .contenido .contenido-informacion {
+    width: 97%;
+    border-left: 2px solid #F2F2F2;
+    border-right: 2px solid #F2F2F2;
+    border-bottom: 2px solid #F2F2F2;
+    padding: 0.5em 1em 1em 1em;
+    margin-bottom: 1em;
+
+}
+
+/* ==========================================================================
+  6. Tabla general
+  ========================================================================== */
+.fce table.tabla-general {
+    border-collapse: collapse;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10pt;
+}
+
+.fce table.tabla-general caption {
+    text-align: left;
+}
+
+.fce table.tabla-general td,
+.fce table.tabla-general th {
+    padding: 8px;
+}
+
+.fce table.tabla-general th {
+    background-color: #004170;
+    color: #ffffff;
+    border: 1px solid #e9eae8;
+}
+
+.fce table.tabla-general td {
+    border: 1px solid #004170;
+}
+
+.fce table.tabla-general th p,
+.fce table.tabla-general td p {
+    margin: 0;
+}
+
+.fce table.tabla-general tr:nth-child(even) {
+    background: #e9eae8;
+}
+
+.fce table.tabla-general tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+/* ==========================================================================
+  6. Tabla resultados
+  ========================================================================== */
+
+.fce table.tabla-resultados {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12pt;
+}
+
+.fce table.tabla-resultados a {
+    color: #000000;
+}
+
+.fce table.tabla-resultados caption {
+    text-align: left;
+}
+
+.fce table.tabla-resultados td,
+.fce table.tabla-resultados th {
+    padding: 8px;
+}
+
+.fce table.tabla-resultados th {
+    background-color: #004170;
+    color: #ffffff;
+    border: 2px solid #FFFFFF;
+
+
+}
+
+.fce table.tabla-resultados td {
+    color: black;
+    background: #F2F2F2;
+    border: 2px solid #ffffff;
+}
+
+.fce table.tabla-resultados tr:hover td {
+    background: #ffffff;
+    color: #000000 !important;
+}
+
+.fce table.tabla-resultados tr:hover td a {
+    color: #0374B5 !important;
+    text-decoration: underline !important;
+}
+
+
+/*Actividades evaluadas*/
+
+.fce table.tabla-actividad caption {
+    color: #003F72;
+    font-weight: bold;
+}
+
+.fce table.tabla-actividad th {
+    background-color: #3f779f;
+    color: #ffffff;
+    width: 30%;
+}
+
+.fce table.tabla-actividad thead th {
+    font-weight: bold;
+    text-align: center;
+}
+
+.fce table.tabla-actividad tbody td {
+    padding: 4px 6px !important;
+    border: solid 1px #004170;
+    ;
+}
+
+.fce table.tabla-actividad tr:nth-child(even) {
+    background: #ffffff;
+    width: 100%;
+    border: 1px solid #E0DED8;
+}
+
+/* ==========================================================================
+  7. Tabla componentes
+  ========================================================================== 
+
+.fce table.tabla-componentes {
+   border-collapse: collapse;
+   width: 60%;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 12pt;
+}
+
+
+.fce table.tabla-componentes caption {
+   text-align: left;
+}
+
+
+.fce table.tabla-componentes caption {
+   color: #000000;
+   font-weight: bold;
+}
+
+.fce table.tabla-componentes th {
+   background-color: #004170;
+   color: #ffffff;
+   border: 1px solid #FFFFFF;
+
+}
+
+.fce table.tabla-componentes tbody td {
+   padding: 4px 6px !important;
+   border: 1px solid #4D4D4D;
+   ;
+}
+
+.fce table.tabla-componentes tr:nth-child(odd) {
+   background: #F2F2F2;
+   border: 1px solid #4D4D4D;
+}
+*/
+
+/* ==========================================================================
+  8. Otros estilos
+  ========================================================================== */
+
+/* ==========================================================================
+  8.1. Mensajes de informacion
+  ========================================================================== */
+
+.fce .cuadro-texto {
+    padding: 0em 1em;
+    border-radius: 5px;
+    margin: 6px auto;
+    max-width: 600px;
+}
+
+.fce .cuadro-texto.verde {
+    border: 4px solid #83cbfb;
+}
+
+.fce .cuadro-texto.azul {
+    border: 4px solid #83cbfb;
+}
+
+.fce .cuadro-texto.amarillo {
+    border: 2px solid #e2a93b;
+}
+
+.fce .cuadro-texto.naranja {
+    border: 4px solid #83cbfb;
+}
+
+
+/* ==========================================================================
+  8.2. Focalizadores
+  ========================================================================== */
+
+.fce .focalizador {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 120px auto;
+    width: 90%;
+    background-color: #effaff;
+    padding: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fce .focalizador-crs {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    background-color: rgb(255 255 255 / 54%);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3)
+}
+
+/*.fce .focalizador-lectura {
+   display: flex;
+   position: relative;
+   background: #effaff;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}*/
+
+.fce .focalizador-lectura .columna1-mensaje {
+    text-align: center;
+    padding: 2px;
+    width: 10%;
+}
+
+.fce .focalizador-lectura .columna2-mensaje {
+    width: 85%;
+
+}
+
+.fce .focalizador-lectura .titulo-mensaje {
+    font-weight: bold;
+    padding: 2px;
+    border-bottom: 1px solid #003F72;
+}
+
+
+
+
+.fce .col-30-70 {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+}
+
+.fce .col-70-30 {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+}
+
+.fce .col-2 {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+/* ==========================================================================
+  8.3. Accordeon principal
+  ========================================================================== */
+.fce .contenido-accordeon {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding: 1% 0%;
+
+}
+
+.fce .accordeon {
+    /*background-color: #D8DFE1 ;*/
+    border-bottom: 3px solid #003B71;
+    color: #003B71;
+    cursor: pointer;
+    padding: 8px 5px 8px 5px;
+    width: 100px;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fce .accordeon p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.fce .accordeon:after {
+    content: '\002B';
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.fce .accordeon:hover {
+    margin: 0;
+    color: #fff;
+    background-color: #003B71;
+}
+
+
+.fce .activado:hover,
+.fce .activado:hover:after {
+    content: "\2212";
+    color: #fff;
+    background-color: #003B71;
+    margin: 0;
+}
+
+.fce .activado,
+.fce .activado:after {
+    content: "\2212";
+    color: #fff;
+    background-color: #003B71;
+    margin: 0;
+}
+
+
+.fce .activado span {
+    display: none;
+}
+
+.fce .activado p:after {
+    content: "Leer menos";
+
+}
+
+.fce .panel-contenido {
+
+    max-height: 0;
+    overflow: hidden;
+    background: #FDFAF3;
+    margin-bottom: 0.4em;
+    padding: 0 1em;
+}
+
+.fce .accordeon,
+.fce .panel-contenido {
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+
+}
+
+.fce .subtitulo {
+    margin: 0;
+    font-size: 16pt;
+    color: #003F72;
+    text-align: left;
+    padding: 10px;
+}
+
+.fce .pie-pagina {
+    background-color: #F2F2F2;
+    text-align: left;
+}
+
+.fce .letra-azul-utpl {
+    color: #003F72;
+    text-align: left;
+}
+
+.fce .letra-azul-bim-utpl {
+    color: #003F72;
+    text-align: center;
+}
+
+
+.fce .vertical-foto {
+    display: flex;
+    align-items: center;
+    margin: 6% 0px;
+    background: #FBEECC;
+    border-radius: 0.5em;
+}
+
+.fce .naranja-utpl {
+    height: 200px;
+}
+
+
+.fce .vertical-centro {
+    display: flex;
+    align-items: center;
+}
+
+.fce .azul-utpl {
+    background-color: #EDEFF0;
+    text-align: left;
+}
+
+.fce .cuadro-perfil {
+    display: grid;
+    grid-template-columns: 180px auto;
+    padding: 3em;
+    margin-top: 1em;
+    align-items: center;
+}
+
+.fce .cuadro-perfil .foto {
+    position: relative;
+}
+
+.fce .cuadro-perfil .foto .imagen-perfil {
+    position: absolute;
+    top: -7em;
+    right: -3em;
+}
+
+.fce .cuadro-perfil .informacion-perfil-docente {
+    background: #FBEECC;
+    padding: 3em;
+    border-radius: 0.5em;
+}
+
+.fce .cuadro-perfil .informacion-perfil-docente h4,
+.fce .cuadro-perfil .informacion-perfil-docente p {
+    margin: 0px 10px;
+    text-align: left;
+}
+
+/* ==========================================================================
+  8.3. Accordeon texto basico
+  ========================================================================== */
+.fce .texto-basico {
+    background-color: #effaff;
+    padding: 1em;
+}
+
+
+.fce .acordeon-titulo {
+
+    color: #003B71;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    border-radius: 0.5em 0.5em 0 0;
+    border-bottom: 3px solid #003B71;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fce .acordeon-titulo p {
+    margin: 0;
+    padding: 0.5em;
+}
+
+.fce .acordeon-titulo:after {
+    content: '\002B';
+    font-weight: bold;
+
+    margin-right: 1em;
+}
+
+.fce .activador,
+.fce .acordeon-titulo:hover {
+    background-color: #003B71;
+    color: #fff;
+    border-bottom: 3px solid #003B71;
+}
+
+.fce .activador:after {
+    content: "\2212";
+}
+
+.fce .panel-textobasico {
+    margin-top: 1em;
+    padding: 0 1em;
+    max-height: 0;
+    overflow: hidden;
+
+    /*    transition: max-height 0.2s ease-out;
+*/
+}
+
+.fce .acordeon-titulo,
+.fce .panel-textobasico {
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+
+/* ==========================================================================
+  8.3. Accordeon contenido
+  ========================================================================== */
+
+.fce .acordeon-contenido {
+    color: #003B71;
+    cursor: pointer;
+    width: 60%;
+    text-align: left;
+    outline: none;
+    border-radius: 0.5em 0.5em 0 0;
+    border-bottom: 3px solid #003B71;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.fce .acordeon-contenido p {
+    margin: 0;
+    padding: 0.5em;
+}
+
+.fce .acordeon-contenido:after {
+    content: '\002B';
+    font-weight: bold;
+
+    margin-right: 1em;
+}
+
+.fce .activador,
+.fce .acordeon-contenido:hover {
+    background-color: #003B71;
+    color: #fff;
+    border-bottom: 3px solid #003B71;
+}
+
+.fce .activador:after {
+    content: "\2212";
+}
+
+.fce .panel-cont-accordeon {
+    margin-top: 1em;
+    padding: 0 1em;
+    max-height: 0;
+    overflow: hidden;
+
+    /*    transition: max-height 0.2s ease-out;
+*/
+}
+
+.fce .acordeon-contenido,
+.fce .panel-cont-accordeon {
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+
+
+/* ==========================================================================
+  9. Archivos previsualziacion
+  ========================================================================== */
+.fce .archivos {
+    margin-right: auto;
+    padding: 10px;
+    position: relative;
+    width: 650px;
+
+}
+
+/* ==========================================================================
+  10. Boton flotante
+  ========================================================================== */
+#button {
+    display: inline-block;
+    background-color: #eaab00;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed !important;
+    bottom: 90px;
+    right: 50px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    text-decoration: none !important;
+}
+
+#button::after {
+    content: "\21E7";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #003f72;
+}
+
+#button:active {
+    background-color: #555;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ==========================================================================
+  12. Media Query
+  ========================================================================== */
+
+@media screen and (max-width: 540px) {
+    .fce .figura-benner {
+        width: 98%;
+        padding: 1%;
+    }
+
+    .fce .video {
+        width: 100%;
+        height: auto;
+    }
+
+    .fce .contenido-ventana {
+        width: 75%;
+    }
+
+    .fce .icono-contexto {
+        display: none;
+    }
+
+    .fce .cuadro-perfil {
+        padding: 0;
+        margin-bottom: 2em;
+    }
+
+    .fce .cuadro-perfil .informacion-perfil-docente h4,
+    .fce .cuadro-perfil .informacion-perfil-docente p {
+        margin: 0px 60px;
+        text-align: left;
+    }
+
+    .fce .cuadro-perfil .informacion-perfil-docente {
+        padding: 1em 0 1em 0.5em;
+    }
+
+    /*------MENU PRINCIPAL--------*/
+    .fce .menu-principal {
+        display: block;
+
+    }
+
+    .fce .menu-principal a:not(:first-child) {
+        display: none;
+    }
+
+    .fce .menu-principal a.icon {
+        display: block;
+        text-align: right;
+        width: auto;
+        border-radius: 12px;
+    }
+
+    .fce .menu-principal.responsive .icon {
+        right: 0;
+        text-align: right;
+    }
+
+    .fce .menu-principal.responsive a {
+        float: none;
+        display: block;
+        width: auto;
+        border-radius: 12px;
+
+
+    }
+
+    .fce .menu-principal a:hover {
+        transform: scale(1.0);
+    }
+
+
+    .fce .menu-principal a.active {
+        background-color: #EAAB00;
+        transform: scale(1.0);
+    }
+
+    /*
+   .fce .boton-ocultar {
+       top: 0px;
+       right: 0px;
+   }*/
+
+    .fce .contenido-tabla {
+        margin-top: 2em;
+
+    }
+
+    .fce table.tabla-resultados {
+        width: auto;
+    }
+
+
+    .fce table.tabla-resultados td,
+    .fce table.tabla-resultados th {
+        padding: 0px;
+    }
+
+    .fce .contenido-principal {
+        margin-left: 0;
+    }
+
+    /*------FIN MENU PRINCIPAL--------*/
+
+
+    .fce .columna-100-movil {
+
+        margin: 10px;
+
+    }
+
+    .fce .columna-75-movil {
+        width: auto;
+        margin: 10px;
+
+    }
+
+    .fce .contenedor-subtitulo {
+        height: auto;
+        display: block;
+    }
+
+    .fce .contenido {
+        width: 96%;
+        display: inline-block;
+    }
+
+    .fce .naranja-utpl {
+        display: block;
+        height: 100%;
+    }
+
+    .fce .contenido .contenido-informacion {
+        width: 93%;
+    }
+
+    .fce .imagen-movil {
+        width: 100%;
+    }
+
+    .fce .contenido-actividad .resultado {
+        margin-top: 2.5em;
+    }
+
+    .fce .fondo-semana1,
+    .fce .fondo-semana2 {
+        height: 3em;
+    }
+
+    .fce .focalizador {
+        padding: 0;
+    }
+
+    .fce .cuadro,
+    .cuadro-v {
+        margin-bottom: 3.5em;
+    }
+
+    .fce .actividad {
+        width: 90%;
+        transform: translate(0px, -75px);
+    }
+
+    .fce .cuadro a,
+    .fce .cuadro a {
+        margin-top: 1.5em;
+    }
+
+    .fce .contenedor-flex {
+        display: inline-block;
+    }
+}
+
+/* ==========================================================================
+11. Dark Mode (solo movile)
+========================================================================== */
+/* @media (prefers-color-scheme: dark) {
+
+    .fce .contenedor-recurso .estilo-enlace a,
+    .fce img {
+        background-color: #FFFFFF;
+    }
+
+    .fce .letra-azul-bim-utpl,
+    .fce .letra-azul-utpl,
+    .fce .acordeon-titulo,
+    .fce .cuadro a,
+    .fce .accordeon,
+    .fce .accordeon:after {
+        color: #FFFFFF;
+    }
+
+    .fce table.tabla-general td,
+    .fce .cuadro-perfil,
+    .fce .texto-basico,
+    .fce .azul-utpl,
+    .fce .focalizador,
+    .fce.cont-accordeon .fce .actividad-recomendada {
+        color: #003F72;
+    }
+
+    .fce .cuadro-perfil img {
+        background: none;
+    }
+
+    .fce .panel-contenido {
+        color: #000000;
+    } 
+}*/
